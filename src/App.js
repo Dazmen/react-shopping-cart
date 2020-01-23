@@ -20,13 +20,13 @@ function App() {
 
 	return (		
 		<div className="App">
-			<ProductContext.provider value={{products, addItem}}>
-				<CartContext.provider value={cart}>
+			<ProductContext.Provider value={{products, addItem}}>
+				<CartContext.Provider value={cart}>
 					<Navigation />
 					<Route exact path="/" component={Products} />
 					<Route path="/cart" component={ShoppingCart} />
-				</CartContext.provider>
-			</ProductContext.provider>
+				</CartContext.Provider>
+			</ProductContext.Provider>
 		</div>		
 	);
 }
